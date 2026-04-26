@@ -3,9 +3,21 @@
 
 .products{
     padding: 50px 0;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
+}
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
 }

@@ -26,7 +26,8 @@ header{
 }
 
 .top_header .search_box{
-width: 500px;
+width: 100%;
+  max-width: 500px;
 display: flex;
 align-items: center;
 background: var(--bg_color);
@@ -202,4 +203,88 @@ height: 50px;
 }
 .suggestions li img{
     width: 30px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+  /* ===== Top Header ===== */
+  .top_header .container {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .top_header .search_box {
+    width: 100%;
+  }
+
+  .top_header .search_box input {
+    width: 100%;
+  }
+
+  .top_header .header_icons {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* ===== Bottom Header ===== */
+  .btm_header .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btm_header .nav {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    width: 100%;
+  }
+
+  /* Hide nav links (mobile menu style) */
+  .btm_header .nav_links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: var(--main_color);
+  }
+
+  .btm_header .nav_links.active {
+    display: flex;
+  }
+
+  .btm_header .nav_links li {
+    justify-content: center;
+    padding: 15px;
+  }
+
+  /* Category full width */
+  .btm_header .category_nav {
+    width: 100%;
+  }
+
+  /* icons */
+  .btm_header .sign_regs_icon {
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+
+  .top_header .Logo {
+    width: 120px;
+  }
+
+  .top_header .header_icons .icon svg {
+    font-size: 24px;
+  }
+
+  .btm_header .category_btn p {
+    font-size: 13px;
+  }
+
+  .top_header .search_box {
+    flex-direction: row;
+  }
 }
