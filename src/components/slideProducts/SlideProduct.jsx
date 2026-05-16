@@ -27,10 +27,27 @@ function SlideProduct({ data, title }) {
             delay: 2500,
             disableOnInteraction: false,
           }}
-          pagination={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          slidesPerView={5}
+          pagination={{ clickable: true }}
           navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          spaceBetween={10}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+            },
+
+            576: {
+              slidesPerView: 2,
+            },
+
+            768: {
+              slidesPerView: 3,
+            },
+
+            1024: {
+              slidesPerView: 5,
+            },
+          }}
           className="mySwiper"
         >
           {data.map((item) => (

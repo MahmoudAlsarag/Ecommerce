@@ -18,7 +18,7 @@
 }
 
 .item_details .imgs_item { 
-    width: 40%;
+    width: 100%;
 }
 .item_details .imgs_item .big_img{
    margin: 0 0 20px 0;
